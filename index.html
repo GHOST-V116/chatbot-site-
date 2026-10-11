@@ -1,8 +1,440 @@
-<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-<script type="module">
-	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lahori Kulfi &amp; Falooda — Pakistani street food and desserts</title>
+  <meta name="description" content="Kulfi, falooda, chaat, rolls and biryani the Lahori way. See the full menu and book us to cater your mehndi, birthday or garden party.">
+  <meta name="theme-color" content="#5A1428">
+  <meta property="og:title" content="Lahori Kulfi & Falooda">
+  <meta property="og:description" content="Kulfi, falooda and Lahori street food. Full menu and event catering.">
+  <meta property="og:image" content="images/falooda-720.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 31V13C4 7 10 4 16 1c6 3 12 6 12 12v18z' fill='%237B1D3A'/%3E%3Cpath d='M11 31V17c0-3 2-5 5-7 3 2 5 4 5 7v14z' fill='%23C99A3B'/%3E%3C/svg%3E">
 
-	createChat({
-		webhookUrl: 'http://localhost:5678/webhook/c80976fe-d82b-43dd-8f67-ba8e78eb3c64/chat'
-	});
-</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400&family=Jost:wght@400;500&display=swap">
+  <!-- Nastaliq is large; request only the glyphs for the Urdu name -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@500&display=swap&text=%D9%84%D8%A7%DB%81%D9%88%D8%B1%DB%8C%20%D9%82%D9%84%D9%81%DB%8C%20%D8%A7%D9%88%D8%B1%20%D9%81%D8%A7%D9%84%D9%88%D8%AF%DB%81">
+  <link rel="preload" as="image" href="images/falooda-720.webp" imagesrcset="images/falooda-480.webp 480w, images/falooda-720.webp 720w" imagesizes="(min-width: 900px) 40vw, 80vw" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Shared arch shape: an ogee Mughal arch in 0–1 coordinates -->
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <defs>
+      <clipPath id="arch" clipPathUnits="objectBoundingBox">
+        <path d="M0 1V.36C0 .2.2.1.5 0 .8.1 1 .2 1 .36V1Z"/>
+      </clipPath>
+    </defs>
+  </svg>
+
+  <header class="masthead" data-masthead>
+    <div class="masthead__inner">
+      <a class="wordmark" href="#top" aria-label="Lahori Kulfi and Falooda, back to top">
+        <svg class="wordmark__arch" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 31V13C4 7 10 4 16 1c6 3 12 6 12 12v18z"/></svg>
+        <span>Lahori Kulfi <span class="amp">&amp;</span> Falooda</span>
+      </a>
+      <button class="navtoggle" type="button" aria-expanded="false" aria-controls="site-nav" data-navtoggle>
+        <span class="navtoggle__bars" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav class="sitenav" id="site-nav" aria-label="Main">
+        <a href="#kulfi">Kulfi</a>
+        <a href="#menu">Menu</a>
+        <a href="#catering">Catering</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__text">
+        <p class="hero__urdu" lang="ur" dir="rtl" aria-hidden="true">لاہوری قلفی اور فالودہ</p>
+        <h1 class="hero__title" id="hero-title">Lahori Kulfi <span class="amp">&amp;</span> Falooda</h1>
+        <p class="hero__lede">Kulfi, falooda and the chaat, rolls and biryani of a Lahore evening.</p>
+        <div class="hero__actions">
+          <a class="btn btn--solid" href="#menu">See the menu</a>
+          <a class="btn btn--line" href="#catering">Book catering</a>
+        </div>
+      </div>
+
+      <figure class="hero__arch">
+        <svg class="hero__frame" viewBox="0 0 100 112" preserveAspectRatio="none" aria-hidden="true">
+          <path pathLength="1" d="M1 111V41C1 23 23 12 50 1c27 11 49 22 49 40v70Z"/>
+        </svg>
+        <picture>
+          <source type="image/webp" srcset="images/falooda-480.webp 480w, images/falooda-720.webp 720w" sizes="(min-width: 900px) 40vw, 80vw">
+          <img src="images/falooda-720.jpg" srcset="images/falooda-480.jpg 480w, images/falooda-720.jpg 720w" sizes="(min-width: 900px) 40vw, 80vw"
+               width="720" height="802" alt="Our falooda: vermicelli in chilled milk, topped with cake pieces and strawberry syrup running down the cup." fetchpriority="high">
+        </picture>
+      </figure>
+    </section>
+
+    <!-- Kulfi -->
+    <section class="kulfi" id="kulfi" aria-labelledby="kulfi-h">
+      <div class="kulfi__intro reveal">
+        <h2 id="kulfi-h">Three kulfis</h2>
+        <p>Kulfi isn't churned like ice cream. The milk is reduced slowly until it is thick and sweet, then frozen, so it stays dense and melts slowly.</p>
+      </div>
+      <ul class="kulfi__row" role="list">
+        <li class="pop reveal" style="--pop:#E9D6AE; --pop-deep:#C9AE78; --i:0">
+          <svg class="pop__art" viewBox="0 0 80 200" aria-hidden="true">
+            <rect class="pop__stick" x="35" y="120" width="10" height="76" rx="4"/>
+            <path class="pop__body" d="M14 30Q14 6 40 6t26 24l-8 104H22Z"/>
+            <path class="pop__shine" d="M24 24q4-10 14-12"/>
+          </svg>
+          <h3>Khoya</h3>
+          <p>The original. Reduced milk, nothing else to hide behind.</p>
+          <p class="pop__price">£3.00</p>
+        </li>
+        <li class="pop reveal" style="--pop:#BFCB91; --pop-deep:#8E9E5B; --i:1">
+          <svg class="pop__art" viewBox="0 0 80 200" aria-hidden="true">
+            <rect class="pop__stick" x="35" y="120" width="10" height="76" rx="4"/>
+            <path class="pop__body" d="M14 30Q14 6 40 6t26 24l-8 104H22Z"/>
+            <path class="pop__shine" d="M24 24q4-10 14-12"/>
+          </svg>
+          <h3>Pistachio</h3>
+          <p>Khoya kulfi with ground pistachio through it.</p>
+          <p class="pop__price">£3.00</p>
+        </li>
+        <li class="pop reveal" style="--pop:#F2BA55; --pop-deep:#D08F23; --i:2">
+          <svg class="pop__art" viewBox="0 0 80 200" aria-hidden="true">
+            <rect class="pop__stick" x="35" y="120" width="10" height="76" rx="4"/>
+            <path class="pop__body" d="M14 30Q14 6 40 6t26 24l-8 104H22Z"/>
+            <path class="pop__shine" d="M24 24q4-10 14-12"/>
+          </svg>
+          <h3>Mango</h3>
+          <p>Sweet mango folded into the kulfi base.</p>
+          <p class="pop__price">£3.00</p>
+        </li>
+      </ul>
+      <aside class="special reveal" aria-labelledby="special-h">
+        <h3 id="special-h">Or have it as falooda</h3>
+        <p>Our Kulfi Falooda puts kulfi on top of a tall glass of falooda. It's the dish the shop is named for.</p>
+        <p class="special__price">Kulfi Falooda (Special, Large) <span>£8.00</span></p>
+      </aside>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu" id="menu" aria-labelledby="menu-h">
+      <div class="menu__head reveal">
+        <h2 id="menu-h">The menu</h2>
+        <p>Please ask us about allergens before you order.</p>
+      </div>
+      <nav class="menu__nav" aria-label="Menu sections" data-menunav>
+        <!--MENU-NAV-->
+        <a class="chip" href="#kulfi-menu">Kulfi</a>
+        <a class="chip" href="#desserts">Desserts</a>
+        <a class="chip" href="#chaat">Chaat</a>
+        <a class="chip" href="#snacks">Snacks</a>
+        <a class="chip" href="#rolls-burgers">Rolls, burgers &amp; sandwiches</a>
+        <a class="chip" href="#mains">Mains</a>
+        <a class="chip" href="#hot-drinks">Hot drinks</a>
+        <a class="chip" href="#cold-drinks">Cold drinks</a>
+        <a class="chip" href="#extras">Extras</a>
+        <!--/MENU-NAV-->
+      </nav>
+      <div class="menu__body">
+      <!--MENU-->
+      <section class="course reveal" id="kulfi-menu" aria-labelledby="kulfi-menu-h">
+        <h3 class="course__title" id="kulfi-menu-h">Kulfi</h3>
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Khoya Kulfi</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£3.00</span></div>
+            <p class="dish__desc">Slow-reduced milk, the original kulfi.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Pistachio Kulfi</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£3.00</span></div>
+            <p class="dish__desc">Creamy kulfi flavoured with pistachio.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Mango Kulfi</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£3.00</span></div>
+            <p class="dish__desc">Creamy kulfi with sweet mango.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="course reveal" id="desserts" aria-labelledby="desserts-h">
+        <h3 class="course__title" id="desserts-h">Desserts</h3>
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Kulfi Falooda (Special, Large)</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£8.00</span></div>
+            <p class="dish__desc">Kulfi served on top of falooda.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Rice Kheer</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£4.00</span></div>
+            <p class="dish__desc">Creamy rice pudding.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Seviyan Kheer</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£5.50</span></div>
+            <p class="dish__desc">Vermicelli simmered in sweet milk.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Gajar Ka Halwa</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£6.00</span></div>
+            <p class="dish__desc">Carrots slow-cooked with milk and ghee.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Zarda (Large)</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£6.00</span></div>
+            <p class="dish__desc">Sweet saffron rice with nuts.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Rasmalai Milk Cake (Regular)</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£5.50</span></div>
+            <p class="dish__desc">Moist milk cake infused with rasmalai.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Biscoff Milk Cake (Regular)</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£6.00</span></div>
+            <p class="dish__desc">Milk cake with the warm spice of Biscoff.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Hazelnut Cheesecake (Regular)</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£6.00</span></div>
+            <p class="dish__desc">Rich, creamy hazelnut cheesecake.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="course reveal" id="chaat" aria-labelledby="chaat-h">
+        <h3 class="course__title" id="chaat-h">Chaat</h3>
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Pani Puri</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£5.50</span></div>
+            <p class="dish__desc">Crisp hollow puris with spiced tamarind water and tangy chutneys.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Pani Puri Family Pack (40 pcs)</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£17.00</span></div>
+            <p class="dish__desc">Forty puris with all the fillings, for sharing.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Papri Chaat</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£6.00</span></div>
+            <p class="dish__desc">Crunchy papri topped with spicy chutneys.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Samosa Chaat</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£6.00</span></div>
+            <p class="dish__desc">Crushed samosa with tangy chutneys and spices.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Aloo Tikki Chaat</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£6.00</span></div>
+            <p class="dish__desc">Crisp potato patties with zesty chutneys and spices.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Channa Chaat</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£5.50</span></div>
+            <p class="dish__desc">Chickpeas tossed with tangy chutneys.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Dahi Ballay</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£8.00</span></div>
+            <p class="dish__desc">Soft lentil dumplings in yoghurt with chutneys and spices.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="course reveal" id="snacks" aria-labelledby="snacks-h">
+        <h3 class="course__title" id="snacks-h">Snacks</h3>
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Veg Samosa</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£2.50</span></div>
+            <p class="dish__desc">Crisp pastry filled with spiced potato.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Pakora</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£3.00</span></div>
+            <p class="dish__desc">Fresh vegetables in spiced batter, fried crisp.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="course reveal" id="rolls-burgers" aria-labelledby="rolls-burgers-h">
+        <h3 class="course__title" id="rolls-burgers-h">Rolls, burgers &amp; sandwiches</h3>
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Chicken Kebab Roll</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£5.00</span></div>
+            <p class="dish__desc">Juicy chicken kebab wrapped in naan with zesty sauces.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Chicken Tikka Roll with Fries</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£7.50</span></div>
+            <p class="dish__desc">Chicken tikka and crisp lettuce in a soft wrap, with fries.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Gourmet Chicken Burger and Fries</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£7.50</span></div>
+            <p class="dish__desc">Marinated, spiced chicken patty in a soft bun.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Shami Anda Burger with Fries</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£8.00</span></div>
+            <p class="dish__desc">Shami kebab patty and a fried egg with tangy sauces, the Lahore classic.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Chicken Club Sandwich</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£8.50</span></div>
+            <p class="dish__desc">Layered with tender grilled chicken.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Masala Fries</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£3.75</span></div>
+            <p class="dish__desc">Crisp fries tossed in masala.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Fries</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£3.00</span></div>
+            <p class="dish__desc">Crisp, golden and hot.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="course reveal" id="mains" aria-labelledby="mains-h">
+        <h3 class="course__title" id="mains-h">Mains</h3>
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Chicken Biryani</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£9.50</span></div>
+            <p class="dish__desc">Tender chicken, basmati rice and traditional spices.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Lamb Biryani</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£13.00</span></div>
+            <p class="dish__desc">Tender lamb layered with fragrant rice and spices.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Butter Chicken</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£9.50</span></div>
+            <p class="dish__desc">Chicken simmered in a rich, creamy sauce.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Tarka Daal</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£7.00</span></div>
+            <p class="dish__desc">Lentils tempered with aromatic spices, served with garlic naan.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="course reveal" id="hot-drinks" aria-labelledby="hot-drinks-h">
+        <h3 class="course__title" id="hot-drinks-h">Hot drinks</h3>
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Desi Chai</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£3.20</span></div>
+            <p class="dish__desc">Strong, milky black tea.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Kashmiri Chai</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£3.20</span></div>
+            <p class="dish__desc">Pink tea, rich and full-bodied.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="course reveal" id="cold-drinks" aria-labelledby="cold-drinks-h">
+        <h3 class="course__title" id="cold-drinks-h">Cold drinks</h3>
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Mango Lassi</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£4.50</span></div>
+            <p class="dish__desc">Yoghurt blended with ripe mango.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Almond Milk</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£4.50</span></div>
+            <p class="dish__desc">Creamy blended almond drink.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Fresh Orange Juice</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£5.00</span></div>
+            <p class="dish__desc">Squeezed from ripe oranges.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Fresh Lemonade</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£3.00</span></div>
+            <p class="dish__desc">Made with fresh lemon.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Rubicon Mango</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£1.80</span></div>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Rubicon Passion Fruit</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£1.80</span></div>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Tango</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£1.80</span></div>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Barr Cola</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£1.80</span></div>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Fruit Shoot Orange</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£1.50</span></div>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Fruit Shoot Summer Fruits</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£1.50</span></div>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Water</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£1.80</span></div>
+          </li>
+        </ul>
+      </section>
+      <section class="course reveal" id="extras" aria-labelledby="extras-h">
+        <h3 class="course__title" id="extras-h">Extras</h3>
+        <ul class="dishes" role="list">
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Mint Sauce</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£0.50</span></div>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Imli Sauce</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£0.50</span></div>
+            <p class="dish__desc">Sweet and tangy tamarind.</p>
+          </li>
+          <li class="dish">
+            <div class="dish__line"><h4 class="dish__name">Chilli Sauce</h4><span class="dish__dots" aria-hidden="true"></span><span class="dish__price">£0.50</span></div>
+          </li>
+        </ul>
+      </section>
+      <!--/MENU-->
+      </div>
+    </section>
+
+    <!-- Catering -->
+    <section class="catering" id="catering" aria-labelledby="catering-h">
+      <div class="catering__inner">
+        <div class="catering__text reveal">
+          <h2 id="catering-h">We cater mehndis, birthdays and garden parties</h2>
+          <p>Book a dessert table of kheer pots, milk cakes and kulfi, a pani puri and chaat station, or a full buffet with biryani and chicken.</p>
+          <ul class="catering__list" role="list">
+            <li>Dessert tables and kulfi for guests</li>
+            <li>Live chaat and pani puri stations</li>
+            <li>Biryani, butter chicken and hot buffet trays</li>
+          </ul>
+          <!-- TODO: point this at your phone, WhatsApp or email -->
+          <a class="btn btn--gold" href="#visit">Ask about catering</a>
+        </div>
+        <div class="catering__photos">
+          <figure class="archphoto reveal" style="--i:0">
+            <picture>
+              <source type="image/webp" srcset="images/dessert-table-480.webp 480w, images/dessert-table-800.webp 800w" sizes="(min-width: 900px) 24vw, 45vw">
+              <img src="images/dessert-table-800.jpg" srcset="images/dessert-table-480.jpg 480w, images/dessert-table-800.jpg 800w" sizes="(min-width: 900px) 24vw, 45vw"
+                   width="800" height="1067" loading="lazy" decoding="async" alt="An outdoor dessert table with kheer cups topped with pistachio and rose petals, milk cake slices and biscuits on wooden stands.">
+            </picture>
+            <figcaption>Garden party dessert table</figcaption>
+          </figure>
+          <figure class="archphoto reveal" style="--i:1">
+            <picture>
+              <source type="image/webp" srcset="images/catering-buffet-480.webp 480w, images/catering-buffet-800.webp 800w" sizes="(min-width: 900px) 24vw, 45vw">
+              <img src="images/catering-buffet-800.jpg" srcset="images/catering-buffet-480.jpg 480w, images/catering-buffet-800.jpg 800w" sizes="(min-width: 900px) 24vw, 45vw"
+                   width="800" height="1067" loading="lazy" decoding="async" alt="An evening buffet with chicken wings, biryani garnished with lemon, pani puri and chickpea chaat.">
+            </picture>
+            <figcaption>Evening buffet with pani puri station</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <section class="visit" id="visit" aria-labelledby="visit-h">
+      <h2 id="visit-h" class="reveal">Come and eat</h2>
+      <!-- TODO: replace the bracketed placeholders with your real details -->
+      <div class="visit__grid">
+        <div class="visit__block reveal" style="--i:0">
+          <h3>Find us</h3>
+          <address>[Street address]<br>[Town, postcode]</address>
+        </div>
+        <div class="visit__block reveal" style="--i:1">
+          <h3>Opening hours</h3>
+          <dl class="hours">
+            <div><dt>Mon – Thu</dt><dd>[00:00 – 00:00]</dd></div>
+            <div><dt>Fri – Sat</dt><dd>[00:00 – 00:00]</dd></div>
+            <div><dt>Sunday</dt><dd>[00:00 – 00:00]</dd></div>
+          </dl>
+        </div>
+        <div class="visit__block reveal" style="--i:2">
+          <h3>Orders and catering</h3>
+          <p><a href="tel:+440000000000">[Phone number]</a><br><a href="mailto:hello@example.com">[Email address]</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <svg class="footer__ornament" viewBox="0 0 240 24" aria-hidden="true"><path d="M0 12h96M144 12h96M120 2c-8 6-14 8-24 10 10 2 16 4 24 10 8-6 14-8 24-10-10-2-16-4-24-10Z"/></svg>
+    <p class="footer__name">Lahori Kulfi &amp; Falooda</p>
+    <p class="footer__small">© <span data-year>2026</span> Lahori Kulfi &amp; Falooda.</p>
+  </footer>
+</body>
+</html>

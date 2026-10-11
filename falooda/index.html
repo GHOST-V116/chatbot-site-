@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kulfi Falooda, Taken Apart | Lahori Kulfi &amp; Falooda</title>
+  <meta name="description" content="Scroll through our Kulfi Falooda layer by layer: chilled milk, rabri, rose syrup, falooda sev, sabja seeds, kulfi and pistachio.">
+  <meta name="theme-color" content="#120A0D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400&family=Jost:wght@400;500&display=swap">
+  <link rel="stylesheet" href="falooda.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.min.js" } }
+  </script>
+  <script src="vendor/gsap.min.js" defer></script>
+  <script src="vendor/ScrollTrigger.min.js" defer></script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <canvas class="stage" aria-hidden="true"></canvas>
+
+  <!-- Shown when WebGL is unavailable -->
+  <figure class="fallback" hidden>
+    <img src="../images/falooda-720.jpg" width="720" height="802" alt="Our Kulfi Falooda in a clear cup.">
+  </figure>
+
+  <div class="loader" aria-hidden="true"><span></span></div>
+
+  <header class="brand">
+    <a class="brand__name" href="../">Lahori Kulfi <i>&amp;</i> Falooda</a>
+    <a class="brand__link" href="../#menu">Full menu</a>
+  </header>
+
+  <div class="chapters">
+    <section class="chapter" data-ch="1" aria-labelledby="ch1">
+      <p class="chapter__num">I</p>
+      <h1 id="ch1">Kulfi Falooda</h1>
+      <p>Our signature: kulfi on a tall cup of falooda. Scroll to take it apart, layer by layer.</p>
+    </section>
+    <section class="chapter" data-ch="2" aria-labelledby="ch2">
+      <p class="chapter__num">II</p>
+      <h2 id="ch2">The pour</h2>
+      <p>Chilled milk, thick rabri and rose syrup are layered into every cup.</p>
+    </section>
+    <section class="chapter" data-ch="3" aria-labelledby="ch3">
+      <p class="chapter__num">III</p>
+      <h2 id="ch3">Sev and sabja</h2>
+      <p>Silky falooda sev and soaked sabja seeds give each spoonful its texture.</p>
+    </section>
+    <section class="chapter" data-ch="4" aria-labelledby="ch4">
+      <p class="chapter__num">IV</p>
+      <h2 id="ch4">Kulfi on top</h2>
+      <p>A scoop of slow-reduced kulfi, finished with chopped pistachio.</p>
+    </section>
+  </div>
+
+  <!-- Callouts follow their ingredient on screen; positions are set from the 3D scene -->
+  <div class="callouts" aria-hidden="true">
+    <div class="callout" data-key="milk"><span class="callout__dot"></span><span class="callout__line"></span><span class="callout__text"><b>Chilled milk</b>Sweetened and ice cold</span></div>
+    <div class="callout" data-key="rabri"><span class="callout__dot"></span><span class="callout__line"></span><span class="callout__text"><b>Rabri</b>Milk reduced until thick</span></div>
+    <div class="callout" data-key="rose"><span class="callout__dot"></span><span class="callout__line"></span><span class="callout__text"><b>Rose syrup</b>Poured down the glass</span></div>
+    <div class="callout" data-key="sev"><span class="callout__dot"></span><span class="callout__line"></span><span class="callout__text"><b>Falooda sev</b>Fine, silky vermicelli</span></div>
+    <div class="callout" data-key="sabja"><span class="callout__dot"></span><span class="callout__line"></span><span class="callout__text"><b>Sabja seeds</b>Soaked into soft pearls</span></div>
+    <div class="callout" data-key="kulfi"><span class="callout__dot"></span><span class="callout__line"></span><span class="callout__text"><b>Kulfi</b>Dense, slow-melting</span></div>
+    <div class="callout" data-key="pista"><span class="callout__dot"></span><span class="callout__line"></span><span class="callout__text"><b>Pistachio</b>Chopped, on top</span></div>
+  </div>
+
+  <nav class="rail" aria-label="Chapters">
+    <span class="rail__track"><span class="rail__fill"></span></span>
+    <a href="#" data-go="0">Falooda</a>
+    <a href="#" data-go="0.3">The pour</a>
+    <a href="#" data-go="0.58">Sev and sabja</a>
+    <a href="#" data-go="0.86">Kulfi</a>
+  </nav>
+
+  <p class="hint" aria-hidden="true">Scroll to pour</p>
+
+  <!-- The scroll distance that drives the sequence -->
+  <div class="scrolly"></div>
+
+  <section class="outro" aria-labelledby="outro-h">
+    <h2 id="outro-h">Kulfi Falooda (Special, Large)</h2>
+    <p class="outro__price">£8.00</p>
+    <p>Come and have one at Lahori Kulfi &amp; Falooda, or try a kulfi on its own from £3.00.</p>
+    <div class="outro__actions">
+      <a class="btn btn--solid" href="../#menu">See the full menu</a>
+      <a class="btn btn--line" href="../#visit">Find us</a>
+    </div>
+  </section>
+</body>
+</html>
